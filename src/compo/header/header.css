@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 100px 50px 100px;
+  }
+  
+  .header_nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .header_nav_ {
+    display: flex;
+    gap: 60px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    list-style-type: none;
+  }
+  
+  .header_list {
+    font-size: 20px;
+    text-decoration: none;
+    color: black; 
+    font-weight: 500;
+    height: 34px;
+  }
+  
+  .header_list:hover {
+    text-decoration: underline;
+}
+  
+.header img {
+    height: 68px;
+}

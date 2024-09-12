@@ -1,0 +1,19 @@
+.Gallerie {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 30px;
+    row-gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.fond {
+    background-color: #F6F6F6;
+    padding-bottom: 40px;
+    border-radius: 25px;
+    margin-top: 30px;
+    padding-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
