@@ -7,7 +7,7 @@ const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
-  // Gestion dynamique de la hauteur maximale pour la transition
+  // Gestion dynamique la transition
   useEffect(() => {
     if (contentRef.current) {
       if (isOpen) {
