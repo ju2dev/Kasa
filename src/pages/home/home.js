@@ -9,13 +9,37 @@ import imgbannerHome from "../../assets/banner/bannerHome.png";
 
 function Home() {
     const [logementsData, setLogementsData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true); // Indicateur de chargement
+    const [error, setError] = useState(null); // Gestion des erreurs
 
     useEffect(() => {
         fetch("/logement.json")
-            .then((response) => response.json())
-            .then((data) => setLogementsData(data))
-            .catch((error) => console.error("Error fetching logements:", error));
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Erreur lors du chargement du fichier logement.json");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setLogementsData(data);
+                setIsLoading(false); // Fin du chargement
+            })
+            .catch((error) => {
+                setError(error.message);
+                setIsLoading(false); // Fin du chargement en cas d'erreur
+            });
     }, []);
+
+    // Contenu affiché en fonction du statut de chargement ou de l'erreur
+    const galleryContent = isLoading ? (
+        <p>Chargement des logements...</p>
+    ) : error ? (
+        <p>Erreur : {error}</p>
+    ) : (
+        logementsData.map((logement) => (
+            <Carte key={logement.id} logement={logement} />
+        ))
+    );
 
     return (
         <div className="home">
@@ -24,10 +48,8 @@ function Home() {
                 <Banner texte="Chez vous, partout et ailleurs" image={imgbannerHome} />
             </main>
             <Gallerie className="carte">
-                {logementsData.map((logement) => (
-                    <Carte key={logement.id} logement={logement} />
-                ))} 
-                </Gallerie>
+                {galleryContent}
+            </Gallerie>
             <Footer />
         </div>
     );
