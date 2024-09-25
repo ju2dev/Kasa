@@ -1,0 +1,72 @@
+/* Carrousel container */
+.slide {
+    display: flex;
+    position: relative;
+    height: 400px; 
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px; /* Arrondir les bords de l'image */
+    margin-left: 5%;
+  }
+  
+  /* Flèche gauche */
+  .left-Arrow {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  /* Flèche droite */
+  .right-Arrow {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+
+  
+  /* Slider container */
+  .slider {
+    opacity: 0;
+  }
+  
+  .slider.active {
+    opacity: 1;
+  }
+  
+  .slide_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px; /* Arrondir l'image */
+  }
+  
+  /* Numérotation des slides */
+  .slider_number {
+    position: absolute;
+    bottom: 20px;
+    right: 52%;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+
+  
