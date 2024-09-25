@@ -1,0 +1,9 @@
+.collapse {
+    width: 100%; 
+    margin-left: 30%; 
+}
+
+.collapse_down {
+    display: flex;
+    flex-direction: column;
+}
