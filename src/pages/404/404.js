@@ -1,12 +1,25 @@
 import React from 'react';
+import './Erreur.css';
+import { Link } from 'react-router-dom';
+import Footer from "../../compo/footer";
+import Header from "../../compo/header/header";
 
-const NoPage = () => {
+function Erreur() {
   return (
-    <div>
-      <h1>404 - Page non trouvée</h1>
-      <p>Désolé, la page que vous recherchez n'existe pas.</p>
-    </div>
+    <>
+      <Header />
+      <div className="container-error">
+        <span className="container-error_error">404</span>
+        <span className="container-error_message">
+          Oups! La page que vous demandez n'existe pas.
+        </span>
+        <Link className="container-error_lien" to="/">
+          Retourner sur la page d'accueil
+        </Link>
+      </div>
+      <Footer />
+    </>
   );
-};
+}
 
-export default NoPage;
+export default Erreur;
