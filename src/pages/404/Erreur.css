@@ -1,0 +1,26 @@
+.container-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    gap: 150px;
+    margin: 150px 0;
+  }
+  
+  .container-error_error {
+    font-size: 240px;
+    font-weight: 700;
+  }
+  
+  .container-error_message {
+    font-size: 32px;
+  }
+  
+  .container-error_lien {
+    font-size: 24px;
+    color: black;
+    font-weight: 500;
+  }
+  
+  
