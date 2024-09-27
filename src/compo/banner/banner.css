@@ -1,10 +1,4 @@
-* {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-weight: 700;
-  }
+@import '../../assets/style/style.css';
   
   .banner {
     height: 200px;
@@ -33,8 +27,9 @@
     height: 100%;
     justify-content: center;
     align-items: center;
-    font-size: 3vw;
-    line-height: 1.4;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 68.45px;
     text-shadow:
       -1px -1px 0 #000,
       1px -1px 0 #000,
@@ -50,18 +45,23 @@
     height: 100%;
     border-radius: 25px;
     left: 0;
-    opacity: 0.3;
+    opacity: 0.6;
     position: absolute;
     top: 0;
   }
   
-  @media (max-width: 768px) {
+    @media (max-width: 768px) {
     .banner {
       height: 150px;
     }
   
     .banner_text {
-      font-size: 5vw;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 700;
       text-shadow: none;
+      padding-left: 10px;
+      text-align: left; /* Aligne le texte à gauche */
+      width: 230px;
     }
   }
