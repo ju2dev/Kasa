@@ -1,9 +1,29 @@
-.collapse {
-    width: 100%; 
-    margin-left: 30%; 
-}
-
-.collapse_down {
+.about {
     display: flex;
     flex-direction: column;
-}
+    min-height: 100vh; /* S'assure que la page occupe toute la hauteur de la fenêtre */
+  }
+  
+  main {
+    flex-grow: 1; /* Permet à l'élément main de prendre tout l'espace disponible */
+  }
+  
+  .collapse {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+  }
+  
+  .collapse_down {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 900px; 
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .collapse_down {
+      width: 90%; /* Réduire la largeur pour les petits écrans */
+    }
+  }
