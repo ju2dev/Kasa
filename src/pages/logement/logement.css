@@ -1,81 +1,89 @@
 @import '../../assets/style/style.css';
 
-/* Styles pour la fiche logement */
+/* Conteneur principal de la fiche logement */
 .Fiche-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #FFFFFF;
-  }
-  
-  .Fiche-logement {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 120px;
-  }
-  
-  .description-info {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  .description-info_titletags {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    margin-left: 80px;
-  }
-  
-  .description-info_tags_title {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
-  
-  .titre-logement {
-    font-size: 36px;
-    color: #FF6B6B;
-    font-weight: 500;
-    line-height: 51.34px;
-  }
-  
-  .endroit-logement {
-    font-size: 18px;
-    font-weight: 500;
-    color: black;
-    line-height: 25.67px;
-  }
-  
-  .description-info_tags {
-    display: flex;
-    flex-wrap: wrap; /* Pour les retourner à la ligne si nécessaire */
-    gap: 10px; /* Espace entre les tags */
-    width: auto; 
-  }
-  
-  .tag {
-    background-color: #ff6b6b; 
-    color: white;
-    padding: 5px 20px 5px 20px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 19.96px;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
 
-  
-/* Styles pour l'affichage du propriétaire et des évaluations */
+/* Conteneur pour les informations principales du logement */
+.Fiche-logement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 120px;
+}
+
+/* Conteneur pour les informations descriptives du logement */
+.description-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Conteneur pour le titre et les tags du logement */
+.description-info_titletags {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-left: 80px;
+}
+
+/* Conteneur pour le titre et les tags du logement */
+.description-info_tags_title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* Style pour le titre du logement */
+.titre-logement {
+  font-size: 36px;
+  color: #FF6B6B;
+  font-weight: 500;
+  line-height: 51.34px;
+}
+
+/* Style pour la localisation du logement */
+.endroit-logement {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  line-height: 25.67px;
+}
+
+/* Conteneur pour les tags du logement */
+.description-info_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: auto;
+}
+
+/* Style pour chaque tag */
+.tag {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.96px;
+  text-align: center;
+}
+
+/* Conteneur pour l'affichage du propriétaire et des évaluations */
 .description-info_proprietaire {
   display: flex;
-  flex-direction: column; /* Met photo au-dessus etoile */
+  flex-direction: column;
   margin-left: 80%;
   position: relative;
   bottom: 110px;
 }
 
+/* Style pour le nom du propriétaire */
 .nom-proprietaire {
   padding-right: 5px;
   font-size: 18px;
@@ -84,74 +92,128 @@
   text-align: right;
 }
 
+/* Conteneur pour le nom du propriétaire et la photo */
 .description-info_proprietaire_nom {
   display: flex;
   align-items: center;
   color: #ff6b6b;
-  margin-right: 90px;
 }
 
+/* Style pour l'image du propriétaire */
 .description-info_proprietaire_nom img {
-  width: 64px; 
-  height: 64px; 
-  border-radius: 50%; 
-  object-fit: cover; 
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
+/* Conteneur pour la note du logement */
 .description-info_rate {
   display: flex;
   align-items: center;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
-  /* Styles pour la section collapsée (Description et Équipements) */
-  .description-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+/* Conteneur pour les sections Description et Équipements */
+.description-content {
+  display: flex;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+/* Styles pour les sections Description et Équipements */
+.description-content_description,
+.description-content_equipement {
+  width: 48%;
+}
+
+/* Styles spécifiques pour les équipements listés */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.67px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Version tablette */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .Fiche-container {
+    padding: 15px;
   }
-  
+
+  .description-info_titletags {
+    margin-left: 40px;
+  }
+
+  .titre-logement {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .endroit-logement {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .description-info_tags {
+    width: auto;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+
+  .description-info_proprietaire {
+    margin-left: 70%;
+  }
+
+  .nom-proprietaire {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .description-info_proprietaire_nom img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .description-content {
+    flex-direction: column;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-left: 100px;
+}
+
   .description-content_description,
   .description-content_equipement {
-    width: 48%; /* Chaque section prend 48% de la largeur disponible */
+    width: 45%;
   }
-  
-  .description-content_description {
-    display: flex;
-    flex-direction: column;
-    margin-left: 70px;
-  }
-  
-  .description-content_equipement {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Styles pour les équipements listés */
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
+
   ul li {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25.67px;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 22px;
   }
-  
+}
+
 /* Version mobile */
 @media (max-width: 768px) {
   .Fiche-container {
       padding: 10px;
   }
+
   .nom-proprietaire {
-    margin-right: 0px;
+      margin-right: 0px;
   }
 
   .Fiche-logement {
-      height: auto; /* Ajuster la hauteur pour éviter les débordements */
+      height: auto;
   }
 
   .description-info {
@@ -159,11 +221,11 @@
   }
 
   .description-info_titletags {
-      margin-left: 0; /* Supprimer la marge pour mobile */
+      margin-left: 0;
   }
 
   .titre-logement {
-      font-size: 18px; 
+      font-size: 18px;
       font-weight: 500;
       line-height: 25.67px;
       width: 250px;
@@ -183,39 +245,37 @@
   }
 
   .description-info_tags_title {
-    position: relative;
-    left: 20px;
-    width: 250px;
-}
+      position: relative;
+      left: 20px;
+      width: 250px;
+  }
 
   .tag {
       height: 18px;
       font-size: 10px;
       font-weight: 700;
       line-height: 14.26px;
-      padding: 5px 10px 3px 10px;
+      padding: 8px 10px 5px 10px;
   }
 
   /* Styles pour l'affichage du propriétaire et des évaluations */
   .description-info_proprietaire {
       margin-left: 0;
-      position: static; /* Enlever la position relative pour éviter le décalage */
+      position: static;
       flex-direction: row-reverse;
       justify-content: space-between;
       margin-bottom: 20px;
   }
 
   .nom-proprietaire {
-    margin-right: 10px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 17.11px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 17.11px;
   }
 
   .description-info_proprietaire_nom img {
       width: 50px;
       height: 50px;
-      gap: 10px;
   }
 
   .description-info_rate {
@@ -226,24 +286,26 @@
 
   /* Section collapsée (Description et Équipements) */
   .description-content {
-      flex-direction: column; /* Afficher les éléments les uns sous les autres */
+      flex-direction: column;
       justify-content: flex-start;
+      margin-left: 0px;
+      margin-top: 0px;
   }
 
   .description-content_description,
   .description-content_equipement {
-      width: 100%; /* Chaque section prend 100% de la largeur */
+      width: 100%;
       margin-left: 0;
   }
 
   .description-content_description {
       margin-bottom: 20px;
   }
-  ul li {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18.54px;
-  }
 
+  ul li {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18.54px;
+  }
 }
   

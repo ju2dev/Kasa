@@ -1,31 +1,36 @@
 @import '../../assets/style/style.css';
 
+/* Conteneur principal de la page */
 .about {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* S'assure que la page occupe toute la hauteur de la fenêtre */
-  }
-  
-  main {
-    flex-grow: 1; /* Permet à l'élément main de prendre tout l'espace disponible */
-  }
-  
-  .collapse {
+    min-height: 100vh;
+}
+
+/* Permet à l'élément main de prendre tout l'espace disponible */
+main {
+    flex-grow: 1;
+}
+
+/* Conteneur pour les éléments de la section collapsible */
+.collapse {
     display: flex;
     justify-content: center;
-    width: 100%; 
-  }
-  
-  .collapse_down {
+    width: 100%;
+}
+
+/* Conteneur pour le contenu collapsible */
+.collapse_down {
     display: flex;
     flex-direction: column;
     width: 80%;
-    max-width: 900px; 
+    max-width: 900px;
     align-items: center;
-  }
-  
-  @media screen and (max-width: 768px) {
+}
+
+/* Version mobile */
+@media screen and (max-width: 768px) {
     .collapse_down {
-      width: 90%; /* Réduire la largeur pour les petits écrans */
+        width: 90%;
     }
-  }
+}

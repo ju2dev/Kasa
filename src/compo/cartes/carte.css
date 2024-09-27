@@ -1,5 +1,6 @@
 @import '../../assets/style/style.css';
 
+/* Conteneur principal de la carte */
 .carte {
     width: 350px;
     height: 350px;
@@ -8,40 +9,34 @@
     border-radius: 10px;
 }
 
+/* Image de la carte */
 .carte_img {
     width: inherit;
     height: inherit;
     object-fit: cover;
     border-radius: inherit;
-  }
-
-.carte_overlay {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: inherit;
-  }
-
-.carte_title {
-  position: absolute;
-  bottom: 0;
-  margin: 15px 20px;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 25.67px;
 }
 
-/* Styles spécifiques pour les écrans de moins de 375px */
+/* Titre de la carte */
+.carte_title {
+    position: absolute;
+    bottom: 0;
+    margin: 15px 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.67px;
+}
+
+/* Version mobile */
 @media (max-width: 375px) {
   .carte {
-    width: 100%; /* Largeur complète sur les petits écrans */
+    width: 100%; /* Largeur complète sur petits écrans */
     max-width: none; /* Supprimer la largeur maximale */
   }
 
   .carte_title {
-    font-size: 18px; /* Réduire la taille de la police sur les petits écrans */
+    font-size: 18px; /* Ajuster la taille de la police */
     font-weight: 700;
     line-height: 25.67px;
   }

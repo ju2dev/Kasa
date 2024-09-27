@@ -1,14 +1,14 @@
 @import '../../assets/style/style.css';
 
-/* Carrousel container */
+/* Conteneur principal du carrousel */
 .slide {
   display: flex;
   position: relative;
   height: 400px; 
-  margin: 20px auto; /* Centrage horizontal avec 'auto' */
+  margin: 20px auto;
   overflow: hidden;
-  border-radius: 10px; /* Arrondir les bords de l'image */
-  max-width: 90%; /* Limiter la largeur du carrousel pour éviter qu'il ne prenne toute la largeur */
+  border-radius: 10px;
+  max-width: 90%;
 }
 
 /* Flèche gauche */
@@ -29,7 +29,7 @@
 .right-Arrow {
   position: absolute;
   top: 50%;
-  right: 10px; /* Ajusté pour correspondre à la marge de la flèche gauche */
+  right: 10px;
   transform: translateY(-50%);
   font-size: 2rem;
   color: white;
@@ -39,7 +39,7 @@
   z-index: 10;
 }
 
-/* Slider container */
+/* Diapositive */
 .slider {
   opacity: 0.7;
   transition: opacity 1s ease-in-out;
@@ -49,6 +49,7 @@
   opacity: 1;
 }
 
+/* Image de la diapositive */
 .slide_image {
   width: 100%;
   height: 100%;
@@ -56,7 +57,7 @@
   border-radius: 10px;
 }
 
-/* Numérotation des slides */
+/* Numérotation des diapositives */
 .slider_number {
   position: absolute;
   bottom: 20px;
@@ -69,20 +70,20 @@
   border-radius: 5px;
 }
 
-/* Styles spécifiques pour les petits écrans */
+/* Version mobile */
 @media (max-width: 700px) {
 .left-Arrow img, .right-Arrow img {
   width: 15px; 
 }
 
 .slide {
-  margin: 20px auto; /* Assurer le centrage sur mobile aussi */
+  margin: 20px auto;
   height: 255px;
   width: 335px;
 }
 
 .slider_number {
-  display: none; /* Masquer le numéro de la diapositive pour les petits écrans */
+  display: none;
 }
 }
 

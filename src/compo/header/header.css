@@ -1,65 +1,74 @@
 @import '../../assets/style/style.css';
 
+/* Conteneur principal de l'en-tête */
 .header {
     display: flex;
     flex-direction: row;
-    margin: 40px 100px 50px 100px;
-  }
-  
-  .header_nav {
+    margin: 40px 100px 50px 100px; /* Marges autour de l'en-tête */
+}
+
+/* Conteneur de la navigation */
+.header_nav {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 15px;
-  }
-  
-  .header_nav_ {
+    justify-content: flex-end; /* Aligne les éléments de navigation à droite */
+    align-items: center; /* Centre les éléments verticalement */
+    margin-top: 15px; /* Marge au-dessus de la navigation */
+}
+
+/* Conteneur des éléments de navigation */
+.header_nav_ {
     display: flex;
-    gap: 60px;
+    gap: 60px; /* Espace entre les éléments de navigation */
     font-size: 24px;
     font-weight: 500;
     line-height: 33.22px;
-  }
-  
-  .header_list {
-    font-size: 20px;
-    text-decoration: none;
-    color: black; 
-  }
-  
-  .header_list:hover,
-  .header_list.active {
-      text-decoration: underline;
-  }
-  
-.header img {
-    height: 68px;
 }
 
-/* Styles spécifiques pour les écrans de moins de 750px */
+/* Style pour les liens de navigation */
+.header_list {
+    font-size: 20px;
+    text-decoration: none; /* Enlève le soulignement par défaut */
+    color: black; 
+}
+
+/* Style pour les liens de navigation au survol et lorsqu'ils sont actifs */
+.header_list:hover,
+.header_list.active {
+    text-decoration: underline; /* Soulignement des liens au survol ou lorsqu'ils sont actifs */
+}
+
+/* Style pour les images dans l'en-tête */
+.header img {
+    height: 68px; /* Hauteur fixe pour les images */
+}
+
+/* Version mobile */
 @media (max-width: 750px) {
-  .header {
-    margin: 30px 15px;
-    align-items: center;
-  }
+    .header {
+        margin: 30px 15px; /* Marges réduites pour les petits écrans */
+        align-items: center; /* Centre les éléments verticalement */
+    }
 
-  .header_logo {
-    width: 145px; /* Réduit la taille du logo pour les petits écrans */
-    height: 46.88px;
-  }
+    /* Style pour le logo dans les petits écrans */
+    .header_logo {
+        width: 145px; /* Réduit la taille du logo */
+        height: 46.88px;
+    }
 
-  .header_nav {
-    width: 100%; 
-  }
+    .header_nav {
+        width: 100%; /* La navigation prend toute la largeur */
+    }
 
-  .header_nav_ {
-    gap: 30px; 
-    font-size: 12px; 
-    line-height: 17.11px;
-    font-weight: 500;
-  }
-  .header_list {
-    font-size: 15px;
-  }
+    .header_nav_ {
+        gap: 30px; /* Réduit l'espace entre les éléments de navigation */
+        font-size: 12px; /* Réduit la taille de la police */
+        line-height: 17.11px;
+        font-weight: 500;
+    }
+
+    /* Réduit la taille de la police des liens de navigation */
+    .header_list {
+        font-size: 15px;
+    }
 }

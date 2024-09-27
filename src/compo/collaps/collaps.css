@@ -1,6 +1,6 @@
 @import '../../assets/style/style.css';
 
-/* Container principal du collapse */
+/* Conteneur principal du collapse */
 .collapse_container {
   width: 570px;
   margin: 20px 0;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-/* Titre de la section collapse */
+/* Titre collapse */
 .collapse_title {
   display: flex;
   justify-content: space-between;
@@ -25,7 +25,7 @@
   padding-left: 20px;
 }
 
-/* Contenu qui apparaît lorsque le collapse est ouvert */
+/* Contenu du collapse */
 .collapse_content {
   padding: 0 20px;
   background-color: #FBFBFB;
@@ -39,7 +39,7 @@
 }
 
 .collapse_content.open {
-  max-height: 500px; /* Ajuste selon le contenu, valeur élevée pour permettre la transition */
+  max-height: 500px; /* Ajuste selon le contenu */
   opacity: 1; /* Devenir visible */
   padding: 20px; /* Ajouter du padding quand ouvert */
   font-size: 18px;
@@ -47,19 +47,21 @@
   line-height: 25.67px;
 }
 
+/* Flèche vers le haut */
 .arrow-up {
   width: 32px;
   height: 32px;
   padding-right: 20px;
 }
 
+/* Flèche vers le bas */
 .arrow-down {
   width: 27px;
   height: 32px;
   padding-right: 20px;
 }
 
-/* Media query pour les appareils mobiles */
+/* Version mobile */
 @media screen and (max-width: 768px) {
   .collapse_container {
     width: 100%;

@@ -1,38 +1,42 @@
 @import '../../assets/style/style.css';
 
+/* Conteneur principal de la page d'erreur */
 .container-error {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ff6b6b;
-    gap: 150px;
-    margin: 150px 0;
-  }
-  
-  .container-error_error {
-    width: 597px;
-    height: 263px;
-    font-size: 288px;
-    line-height: 410.69px;
-    font-weight: 700;
-  }
-  
-  .container-error_message {
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 51.34px;
-  }
-  
-  .container-error_lien {
-    font-size: 18px;
-    color: black;
-    font-weight: 500;
-    line-height: 25.67px;
-  }
-  
-  /* Styles spécifiques pour les écrans de moins de 1000px */
-  @media (max-width: 1000px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ff6b6b;
+  gap: 150px;
+  margin: 150px 0;
+}
+
+/* Style pour le texte d'erreur principal */
+.container-error_error {
+  width: 597px;
+  height: 263px;
+  font-size: 288px;
+  line-height: 410.69px;
+  font-weight: 700;
+}
+
+/* Style pour le message d'erreur */
+.container-error_message {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51.34px;
+}
+
+/* Style pour le lien de retour */
+.container-error_lien {
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  line-height: 25.67px;
+}
+
+/* Styles spécifiques pour les écrans de moins de 1000px */
+@media (max-width: 1000px) {
   .container-error_error {
     width: 198px;
     height: 99px;

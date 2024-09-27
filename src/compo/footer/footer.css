@@ -1,5 +1,6 @@
 @import '../../assets/style/style.css';
 
+/* Conteneur principal du footer */
 footer {
     background-color: black;
     text-align: center;
@@ -7,6 +8,7 @@ footer {
     height: 209px;
 }
 
+/* Texte du footer */
 .footer_text {
     color: aliceblue;
     position: relative;
@@ -16,18 +18,25 @@ footer {
     line-height: 34.22px;
 }
 
+/* Logo du footer */
 .footer_logo {
     position: relative;
     top: 60px;
-    filter: brightness(0) invert(1); /* Pour mettre le logo en blanc */
+    filter: brightness(0) invert(1); /* Met le logo en blanc */
     width: auto;
     height: 39.44px;
 }
 
-/* Styles spécifiques pour les petits écrans */
+/* Version tablette */
+@media (min-width: 769px) and (max-width: 1024px) {
+    footer {
+        height: 245px; 
+    }
+}
+
+/* Version mobile */
 @media (max-width: 375px) {
-    .footer {
-      width: 375px;
+    footer {
       height: 209px;
     }
   
@@ -38,11 +47,11 @@ footer {
   
     .footer_text {
       color: #fff;
-      font-size: 12px; /* Réduit la taille de la police pour les petits écrans */
+      font-size: 12px; /* Réduit la taille de la police */
       text-align: center; /* Centre le texte */
       position: relative;
       top: 70px;
       font-weight: 500;
       line-height: 17.11px;
     }
-  }
+}

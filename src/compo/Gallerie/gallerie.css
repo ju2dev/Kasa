@@ -1,6 +1,6 @@
 @import '../../assets/style/style.css';
 
-/* Styles de base */
+/* Conteneur principal de la galerie */
 .Gallerie {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -8,54 +8,37 @@
     row-gap: 30px;
     justify-content: center;
     padding-left: 20px;
-  }
-  
-  .fond {
+}
+
+/* Conteneur principal avec fond et marges */
+.fond {
     background-color: #F6F6F6;
     padding: 40px 20px;
     border-radius: 25px;
     margin: 30px auto;
     max-width: 1200px;
-  }
-  
-  /* Styles pour les écrans larges */
-  @media (min-width: 1024px) {
+}
+
+/* Version tablette */
+@media (max-width: 1023px) and (min-width: 768px) {
     .Gallerie {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
-  
-    .fond {
-      margin-left: 100px;
-      margin-right: 100px;
-    }
-  }
-  
-  /* Styles pour les tablettes */
-  @media (max-width: 1023px) and (min-width: 768px) {
+}
+
+/* Version mobile */
+@media (max-width: 767px) {
     .Gallerie {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        padding-left: 0px;
     }
-  
+
     .fond {
-      margin-left: 50px;
-      margin-right: 50px;
+        background-color: transparent;
+        padding: 20px 10px;
+        margin: 15px auto;
+        border-radius: 0;
     }
-  }
-  
-  /* Styles pour les mobiles */
-  @media (max-width: 767px) {
-    .Gallerie {
-      grid-template-columns: 1fr;
-      gap: 0px;
-      padding-left: 0px;
-    }
-  
-    .fond {
-      background-color: transparent;
-      padding: 20px 10px;
-      margin: 15px auto;
-      border-radius: 0;
-    }
-  }
+}

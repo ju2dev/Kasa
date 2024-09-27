@@ -1,15 +1,17 @@
-@import '../../assets/style/style.css';
-  
-  .banner {
+@import '../../assets/style/style.css';  /* Importation des styles globaux */
+
+/* Conteneur principal de la bannière */
+.banner {
     height: 200px;
     border-radius: 25px;
     position: relative;
     overflow: hidden;
     margin-left: 5%;
     margin-right: 5%;
-  }
-  
-  .banner_img {
+}
+
+/* Image de la bannière */
+.banner_img {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,9 +19,10 @@
     height: 100%;
     object-fit: cover;
     z-index: 0;
-  }
-  
-  .banner_text {
+}
+
+/* Texte de la bannière */
+.banner_text {
     display: flex;
     position: absolute;
     color: white;
@@ -37,9 +40,10 @@
       1px 1px 0 #000;
     padding: 0 5%;
     text-align: center;
-  }
-  
-  .banner_sombre {
+}
+
+/* Couche sombre sur la bannière */
+.banner_sombre {
     background-color: black;
     width: 100%;
     height: 100%;
@@ -48,20 +52,21 @@
     opacity: 0.6;
     position: absolute;
     top: 0;
-  }
-  
-    @media (max-width: 768px) {
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
     .banner {
       height: 150px;
     }
-  
+
     .banner_text {
       font-size: 24px;
       line-height: 24px;
       font-weight: 700;
       text-shadow: none;
       padding-left: 10px;
-      text-align: left; /* Aligne le texte à gauche */
+      text-align: left;
       width: 230px;
     }
-  }
+}
