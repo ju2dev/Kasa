@@ -1,19 +1,62 @@
+/* Styles de base */
 .Gallerie {
     display: grid;
-    grid-template-columns: repeat(3, 350px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    row-gap: 10px;
+    row-gap: 30px;
     margin-top: 20px;
     justify-content: center;
-    padding-top: 30px;
-}
-
-.fond {
+    padding: 30px 20px;
+  }
+  
+  .fond {
     background-color: #F6F6F6;
-    padding-bottom: 40px;
+    padding: 40px 20px;
     border-radius: 25px;
-    margin-top: 30px;
-    padding-top: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
+    margin: 30px auto;
+    max-width: 1200px;
+  }
+  
+  /* Styles pour les écrans larges */
+  @media (min-width: 1024px) {
+    .Gallerie {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding-top: 30px;
+    }
+  
+    .fond {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+  }
+  
+  /* Styles pour les tablettes */
+  @media (max-width: 1023px) and (min-width: 768px) {
+    .Gallerie {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .fond {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+  
+  /* Styles pour les mobiles */
+  @media (max-width: 767px) {
+    .Gallerie {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding-top: 15px;
+      margin-top: 10px;
+    }
+  
+    .fond {
+      background-color: transparent;
+      padding: 20px 10px;
+      margin: 15px auto;
+      border-radius: 0;
+    }
+  }
