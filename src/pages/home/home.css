@@ -1,9 +1,11 @@
+@import '../../assets/style/style.css';
+
 .Banner li {
     font-size: 10px;
   }
 
   /* Styles spécifiques pour les écrans de moins de 375px */
-@media (max-width: 375px) {
+  @media (max-width: 375px) {
   .home .banner {
     height: 120px; /* Hauteur de la bannière pour les petits écrans */
   }

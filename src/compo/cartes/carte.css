@@ -1,11 +1,11 @@
+@import '../../assets/style/style.css';
+
 .carte {
     width: 350px;
     height: 350px;
     position: relative;
     margin-bottom: 20px;
     border-radius: 10px;
-    animation: fadeInUp 600ms ease-in-out;
-    overflow: hidden;
 }
 
 .carte_img {
@@ -13,8 +13,6 @@
     height: inherit;
     object-fit: cover;
     border-radius: inherit;
-    transform: scale(1);
-    transition: transform 300ms;
   }
 
 .carte_overlay {
@@ -30,9 +28,8 @@
   bottom: 0;
   margin: 15px 20px;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
-  font: 'Montserrat';
   line-height: 25.67px;
 }
 
@@ -44,6 +41,13 @@
   }
 
   .carte_title {
-    font-size: 14px; /* Réduire la taille de la police sur les petits écrans */
+    font-size: 18px; /* Réduire la taille de la police sur les petits écrans */
+    font-weight: 700;
+    line-height: 25.67px;
+  }
+
+  .carte_overlay {
+    width: 335px;
+    height: 255px;
   }
 }

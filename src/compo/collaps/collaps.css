@@ -1,3 +1,5 @@
+@import '../../assets/style/style.css';
+
 /* Container principal du collapse */
 .collapse_container {
   width: 570px;
@@ -12,24 +14,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
   height: 52px;
   cursor: pointer;
   background-color: #ff6060;
   color: white;
-  font-weight: 500;
+  font-weight: 700;
   border-radius: 10px 10px 0 0;
   font-size: 12px;
-  transition: background-color 0.3s ease;
-}
-
-.collapse_title:hover {
-  background-color: #ff4040;
-}
-
-/* Flèches */
-.collapse_title img {
-  transition: transform 0.3s ease;
+  line-height: 25.67px;
+  padding-left: 20px;
 }
 
 /* Contenu qui apparaît lorsque le collapse est ouvert */
@@ -49,16 +42,21 @@
   max-height: 500px; /* Ajuste selon le contenu, valeur élevée pour permettre la transition */
   opacity: 1; /* Devenir visible */
   padding: 20px; /* Ajouter du padding quand ouvert */
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.67px;
 }
 
 .arrow-up {
   width: 32px;
   height: 32px;
+  padding-right: 20px;
 }
 
 .arrow-down {
-  width: 32px;
+  width: 27px;
   height: 32px;
+  padding-right: 20px;
 }
 
 /* Media query pour les appareils mobiles */
@@ -69,9 +67,11 @@
   }
 
   .collapse_title {
-    height: 40px;
-    font-size: 13px;
+    height: 30px;
+    font-size: 11px;
     padding: 10px 15px;
+    font-weight: 700;
+    line-height: 18.54px;
   }
 
   .collapse_content {
@@ -80,6 +80,20 @@
 
   .collapse_content.open {
     padding: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18.54px;
   }
 
+  .arrow-up {
+    width: 25px;
+    height: 25px;
+    padding-right: 0px;
+  }
+  
+  .arrow-down {
+    width: 21px;
+    height: 25px;
+    padding-right: 0px;
+  }
 }

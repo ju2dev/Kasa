@@ -1,12 +1,13 @@
+@import '../../assets/style/style.css';
+
 /* Styles de base */
 .Gallerie {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     row-gap: 30px;
-    margin-top: 20px;
     justify-content: center;
-    padding: 30px 20px;
+    padding-left: 20px;
   }
   
   .fond {
@@ -22,7 +23,6 @@
     .Gallerie {
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      padding-top: 30px;
     }
   
     .fond {
@@ -48,9 +48,8 @@
   @media (max-width: 767px) {
     .Gallerie {
       grid-template-columns: 1fr;
-      gap: 20px;
-      padding-top: 15px;
-      margin-top: 10px;
+      gap: 0px;
+      padding-left: 0px;
     }
   
     .fond {

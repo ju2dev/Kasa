@@ -1,3 +1,5 @@
+@import '../../assets/style/style.css';
+
 /* Carrousel container */
 .slide {
   display: flex;
@@ -39,7 +41,7 @@
 
 /* Slider container */
 .slider {
-  opacity: 0;
+  opacity: 0.7;
   transition: opacity 1s ease-in-out;
 }
 
@@ -75,6 +77,8 @@
 
 .slide {
   margin: 20px auto; /* Assurer le centrage sur mobile aussi */
+  height: 255px;
+  width: 335px;
 }
 
 .slider_number {

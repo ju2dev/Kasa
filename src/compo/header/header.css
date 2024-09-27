@@ -1,3 +1,5 @@
+@import '../../assets/style/style.css';
+
 .header {
     display: flex;
     flex-direction: row;
@@ -17,21 +19,19 @@
     gap: 60px;
     font-size: 24px;
     font-weight: 500;
-    font-family: 'Montserrat';
-    list-style-type: none;
+    line-height: 33.22px;
   }
   
   .header_list {
     font-size: 20px;
     text-decoration: none;
     color: black; 
-    font-weight: 500;
-    height: 34px;
   }
   
-  .header_list:hover {
-    text-decoration: underline;
-}
+  .header_list:hover,
+  .header_list.active {
+      text-decoration: underline;
+  }
   
 .header img {
     height: 68px;
@@ -45,7 +45,8 @@
   }
 
   .header_logo {
-    width: 130px; /* Réduit la taille du logo pour les petits écrans */
+    width: 145px; /* Réduit la taille du logo pour les petits écrans */
+    height: 46.88px;
   }
 
   .header_nav {
@@ -54,6 +55,11 @@
 
   .header_nav_ {
     gap: 30px; 
-    font-size: 4vw; 
+    font-size: 12px; 
+    line-height: 17.11px;
+    font-weight: 500;
+  }
+  .header_list {
+    font-size: 15px;
   }
 }

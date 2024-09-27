@@ -1,3 +1,5 @@
+@import '../../assets/style/style.css';
+
 /* Styles pour la fiche logement */
 .Fiche-container {
     display: flex;
@@ -23,7 +25,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    margin-left: 70px;
+    margin-left: 80px;
   }
   
   .description-info_tags_title {
@@ -34,14 +36,16 @@
   
   .titre-logement {
     font-size: 36px;
-    font-weight: bold;
     color: #FF6B6B;
+    font-weight: 500;
+    line-height: 51.34px;
   }
   
   .endroit-logement {
     font-size: 18px;
     font-weight: 500;
     color: black;
+    line-height: 25.67px;
   }
   
   .description-info_tags {
@@ -58,8 +62,7 @@
     border-radius: 30px;
     font-size: 14px;
     font-weight: 700;
-    font-weight: bold;
-    height: 25px;
+    line-height: 19.96px;
     text-align: center;
   }
 
@@ -74,14 +77,18 @@
 }
 
 .nom-proprietaire {
-  margin-right: 10px;
+  padding-right: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  text-align: right;
 }
 
 .description-info_proprietaire_nom {
   display: flex;
   align-items: center;
   color: #ff6b6b;
-  margin-right: 20px; /* Espace entre le nom et les étoiles */
+  margin-right: 90px;
 }
 
 .description-info_proprietaire_nom img {
@@ -127,17 +134,11 @@
   }
   
   ul li {
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.67px;
     color: #333;
     margin-bottom: 10px;
-  }
-  
-  /* Global */
-  body {
-    font-family: 'Montserra', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
   }
   
 /* Version mobile */
@@ -162,27 +163,37 @@
   }
 
   .titre-logement {
-      font-size: 24px; /* Réduire la taille du texte pour les titres */
+      font-size: 18px; 
+      font-weight: 500;
+      line-height: 25.67px;
+      width: 250px;
   }
 
   .endroit-logement {
-      font-size: 16px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19.96px;
+      width: 250px;
   }
 
   .description-info_tags {
       position: relative;
       left: 20px;
+      width: 300px;
   }
 
   .description-info_tags_title {
     position: relative;
     left: 20px;
+    width: 250px;
 }
 
   .tag {
-      font-size: 12px; /* Réduire la taille des tags */
-      padding: 4px 15px; /* Réduire les marges internes */
-      height: auto; /* Laisser la hauteur s'adapter automatiquement */
+      height: 18px;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 14.26px;
+      padding: 5px 10px 3px 10px;
   }
 
   /* Styles pour l'affichage du propriétaire et des évaluations */
@@ -192,6 +203,13 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       margin-bottom: 20px;
+  }
+
+  .nom-proprietaire {
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17.11px;
   }
 
   .description-info_proprietaire_nom img {
@@ -221,5 +239,11 @@
   .description-content_description {
       margin-bottom: 20px;
   }
+  ul li {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18.54px;
+  }
+
 }
   

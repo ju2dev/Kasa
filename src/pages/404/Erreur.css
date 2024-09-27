@@ -1,45 +1,56 @@
+@import '../../assets/style/style.css';
+
 .container-error {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: red;
+    color: #ff6b6b;
     gap: 150px;
     margin: 150px 0;
   }
   
   .container-error_error {
-    font-size: 240px;
+    width: 597px;
+    height: 263px;
+    font-size: 288px;
+    line-height: 410.69px;
     font-weight: 700;
   }
   
   .container-error_message {
-    font-size: 32px;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
   }
   
   .container-error_lien {
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     font-weight: 500;
+    line-height: 25.67px;
   }
   
   /* Styles spécifiques pour les écrans de moins de 1000px */
-@media (max-width: 1000px) {
-  .container-error {
-    gap: 100px; /* Augmente l'espacement entre les éléments */
-    margin: 110px 15px 100px 15px; /* Conserve les marges définies */
-  }
-
+  @media (max-width: 1000px) {
   .container-error_error {
-    font-size: 100px; /* Réduit la taille de police pour le code d'erreur */
+    width: 198px;
+    height: 99px;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 136.9px;
   }
 
   .container-error_message {
-    font-size: 24px; /* Conserve la taille de police pour le message */
+    font-size: 18px;
     text-align: center;
+    font-weight: 500;
+    line-height: 25.67px;
   }
 
   .container-error_lien {
-    font-size: 14px; /* Conserve la taille de police pour le lien */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.96px;
   }
 }
