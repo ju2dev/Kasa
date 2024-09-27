@@ -9,6 +9,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 15px;
   }
   
   .header_nav_ {
@@ -34,4 +35,25 @@
   
 .header img {
     height: 68px;
+}
+
+/* Styles spécifiques pour les écrans de moins de 750px */
+@media (max-width: 750px) {
+  .header {
+    margin: 30px 15px;
+    align-items: center;
+  }
+
+  .header_logo {
+    width: 130px; /* Réduit la taille du logo pour les petits écrans */
+  }
+
+  .header_nav {
+    width: 100%; 
+  }
+
+  .header_nav_ {
+    gap: 30px; 
+    font-size: 4vw; 
+  }
 }
