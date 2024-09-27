@@ -35,3 +35,15 @@
   font: 'Montserrat';
   line-height: 25.67px;
 }
+
+/* Styles spécifiques pour les écrans de moins de 375px */
+@media (max-width: 375px) {
+  .carte {
+    width: 100%; /* Largeur complète sur les petits écrans */
+    max-width: none; /* Supprimer la largeur maximale */
+  }
+
+  .carte_title {
+    font-size: 14px; /* Réduire la taille de la police sur les petits écrans */
+  }
+}
