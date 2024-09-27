@@ -1,20 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
 import flecheHaut from '../../assets/flèches/fleche-haut.png';
-import flecheBas from '../../assets/flèches/fleche-bas.png';
+import flecheBas from '../../assets/flèches/fleche-bas.svg';
 import './collaps.css';
 
 const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
-  // Gestion dynamique la transition
+  // Gestion dynamique de la transition
   useEffect(() => {
     if (contentRef.current) {
-      if (isOpen) {
-        contentRef.current.style.opacity = 1;
-      } else {
-        contentRef.current.style.opacity = 0;
-      }
+      contentRef.current.style.opacity = isOpen ? 1 : 0;
     }
   }, [isOpen]);
 
@@ -22,19 +18,21 @@ const Collapse = ({ title, content }) => {
     <div className="collapse_container">
       <div className="collapse_title" onClick={() => setIsOpen(!isOpen)}>
         <h2>{title}</h2>
-        <p>
-          <img
-            src={isOpen ? flecheBas : flecheHaut}
-            alt={isOpen ? "Flèche vers le bas" : "Flèche vers le haut"}
-            className={isOpen ? "arrow-down" : "arrow-up"}
-          />
-        </p>
+        <img
+          src={isOpen ? flecheBas : flecheHaut}
+          alt={isOpen ? "Flèche vers le bas" : "Flèche vers le haut"}
+          className={isOpen ? "arrow-down" : "arrow-up"}
+        />
       </div>
       <div
         ref={contentRef}
         className={`collapse_content ${isOpen ? "open" : ""}`}
       >
-        <p>{content}</p>
+        {typeof content === 'string' ? (
+          <p>{content}</p>
+        ) : (
+          content
+        )}
       </div>
     </div>
   );
