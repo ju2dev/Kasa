@@ -2,8 +2,8 @@
 .Fiche-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
     padding: 20px;
+    background-color: #FFFFFF;
   }
   
   .Fiche-logement {
@@ -137,8 +137,89 @@
     font-family: 'Montserra', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fafafa;
+    background-color: white;
   }
   
+/* Version mobile */
+@media (max-width: 768px) {
+  .Fiche-container {
+      padding: 10px;
+  }
+  .nom-proprietaire {
+    margin-right: 0px;
+  }
 
+  .Fiche-logement {
+      height: auto; /* Ajuster la hauteur pour éviter les débordements */
+  }
+
+  .description-info {
+      margin-bottom: 10px;
+  }
+
+  .description-info_titletags {
+      margin-left: 0; /* Supprimer la marge pour mobile */
+  }
+
+  .titre-logement {
+      font-size: 24px; /* Réduire la taille du texte pour les titres */
+  }
+
+  .endroit-logement {
+      font-size: 16px;
+  }
+
+  .description-info_tags {
+      position: relative;
+      left: 20px;
+  }
+
+  .description-info_tags_title {
+    position: relative;
+    left: 20px;
+}
+
+  .tag {
+      font-size: 12px; /* Réduire la taille des tags */
+      padding: 4px 15px; /* Réduire les marges internes */
+      height: auto; /* Laisser la hauteur s'adapter automatiquement */
+  }
+
+  /* Styles pour l'affichage du propriétaire et des évaluations */
+  .description-info_proprietaire {
+      margin-left: 0;
+      position: static; /* Enlever la position relative pour éviter le décalage */
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  }
+
+  .description-info_proprietaire_nom img {
+      width: 50px;
+      height: 50px;
+      gap: 10px;
+  }
+
+  .description-info_rate {
+      margin-right: 0;
+      position: relative;
+      left: 20px;
+  }
+
+  /* Section collapsée (Description et Équipements) */
+  .description-content {
+      flex-direction: column; /* Afficher les éléments les uns sous les autres */
+      justify-content: flex-start;
+  }
+
+  .description-content_description,
+  .description-content_equipement {
+      width: 100%; /* Chaque section prend 100% de la largeur */
+      margin-left: 0;
+  }
+
+  .description-content_description {
+      margin-bottom: 20px;
+  }
+}
   
