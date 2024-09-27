@@ -1,3 +1,18 @@
 .Banner li {
     font-size: 10px;
   }
+
+  /* Styles spécifiques pour les écrans de moins de 375px */
+@media (max-width: 375px) {
+  .home .banner {
+    height: 120px; /* Hauteur de la bannière pour les petits écrans */
+  }
+
+  .home .banner__title {
+    font-size: 24px; /* Taille de la police du titre pour les petits écrans */
+    top: 50%; /* Position verticale du titre */
+    left: 55%; /* Position horizontale du titre */
+    transform: translate(-50%, -50%); /* Centrage du titre */
+    text-align: start; /* Alignement du texte */
+  }
+}
