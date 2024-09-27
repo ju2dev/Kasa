@@ -23,4 +23,23 @@
     font-weight: 500;
   }
   
-  
+  /* Styles spécifiques pour les écrans de moins de 1000px */
+@media (max-width: 1000px) {
+  .container-error {
+    gap: 100px; /* Augmente l'espacement entre les éléments */
+    margin: 110px 15px 100px 15px; /* Conserve les marges définies */
+  }
+
+  .container-error_error {
+    font-size: 100px; /* Réduit la taille de police pour le code d'erreur */
+  }
+
+  .container-error_message {
+    font-size: 24px; /* Conserve la taille de police pour le message */
+    text-align: center;
+  }
+
+  .container-error_lien {
+    font-size: 14px; /* Conserve la taille de police pour le lien */
+  }
+}
