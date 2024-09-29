@@ -1,11 +1,11 @@
 import React from 'react'; // Importation de React pour utiliser JSX
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importation des composants de routing de react-router-dom
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importation routing de react-router-dom
 import Header from '../compo/header/header'; // Importation du composant Header pour l'en-tête de l'application
 import Footer from '../compo/footer'; // Importation du composant Footer pour le pied de page de l'application
-import Home from '../pages/home'; // Importation du composant Home pour la page d'accueil
-import FicheLogement from '../pages/logement'; // Importation du composant FicheLogement pour les détails d'un logement
-import APropos from '../pages/propos'; // Importation du composant APropos pour la page à propos
-import NotFound from '../pages/404'; // Importation du composant NotFound pour les pages non trouvées
+import Home from '../pages/home'; // Importation Home pour la page d'accueil
+import FicheLogement from '../pages/logement'; // Importation FicheLogement pour les détails d'un logement
+import APropos from '../pages/propos'; // Importation APropos pour la page à propos
+import NotFound from '../pages/404'; // Importation NotFound pour les pages non trouvées
 
 function AppRouter() {
   return (

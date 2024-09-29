@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/home"; // Importation du composant Home pour la page d'accueil
-import Logement from "./pages/logement/logement"; // Importation du composant Logement pour les détails d'un logement
-import Propos from "./pages/propos/propos"; // Importation du composant Propos pour la page à propos
-import NoPage from "./pages/404/404"; // Importation du composant NoPage pour les pages non trouvées
+import Home from "./pages/home/home"; // Importation Home pour la page d'accueil
+import Logement from "./pages/logement/logement"; // Importation Logement pour les détails d'un logement
+import Propos from "./pages/propos/propos"; // Importation Propos pour la page à propos
+import NoPage from "./pages/404/404"; // Importation NoPage pour les pages non trouvées
 
 const App = () => {
   return (
