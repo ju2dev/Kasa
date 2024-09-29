@@ -8,7 +8,7 @@
   margin: 20px auto;
   overflow: hidden;
   border-radius: 10px;
-  max-width: 90%;
+  width: 90%;
 }
 
 /* Flèche gauche */
@@ -51,7 +51,7 @@
 
 /* Image de la diapositive */
 .slide_image {
-  width: 100%;
+  width: 1300px;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
