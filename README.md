@@ -1,6 +1,6 @@
-## Dépendances projets 
+## Dépendances projets :
 
-yarn install puis yarn add react-router-dom
+yarn install 
 
 # Getting Started with Create React App
 
