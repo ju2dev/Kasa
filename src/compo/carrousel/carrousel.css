@@ -85,5 +85,10 @@
 .slider_number {
   display: none;
 }
+/* Image de la diapositive */
+.slide_image {
+  width: 335px;
+}
+
 }
 

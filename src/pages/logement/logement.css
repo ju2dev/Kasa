@@ -240,13 +240,13 @@ ul li {
 
   .description-info_tags {
       position: relative;
-      left: 20px;
+      left: 10px;
       width: 300px;
   }
 
   .description-info_tags_title {
       position: relative;
-      left: 20px;
+      left: 10px;
       width: 250px;
   }
 
@@ -264,7 +264,6 @@ ul li {
       position: static;
       flex-direction: row-reverse;
       justify-content: space-between;
-      margin-bottom: 20px;
   }
 
   .nom-proprietaire {
@@ -281,7 +280,7 @@ ul li {
   .description-info_rate {
       margin-right: 0;
       position: relative;
-      left: 20px;
+      left: 10px;
   }
 
   /* Section collapsée (Description et Équipements) */

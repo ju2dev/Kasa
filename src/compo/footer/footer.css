@@ -10,7 +10,7 @@ footer {
 
 /* Texte du footer */
 .footer_text {
-    color: aliceblue;
+    color: white;
     position: relative;
     top: 80px;
     font-weight: 500;
@@ -31,6 +31,15 @@ footer {
 @media (min-width: 769px) and (max-width: 1024px) {
     footer {
         height: 245px; 
+    }
+    .footer_text {
+      color: #fff;
+      font-size: 12px; /* Réduit la taille de la police */
+      text-align: center; /* Centre le texte */
+      position: relative;
+      top: 70px;
+      font-weight: 500;
+      line-height: 17.11px;
     }
 }
 
